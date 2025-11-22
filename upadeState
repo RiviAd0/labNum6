@@ -1,0 +1,8 @@
+// Функция для обновления состояния слова
+void updateState(const string& word, vector<char>& guessedState, char guess) {
+    for (size_t i = 0; i < word.length(); ++i) {
+        if (word[i] == guess) {
+            guessedState[i] = guess;
+        }
+    }
+}
