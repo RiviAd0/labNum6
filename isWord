@@ -1,0 +1,7 @@
+// Функция для проверки, есть ли еще неотгаданные буквы
+bool isWordGuessed(const vector<char>& guessedState) {
+    for (char c : guessedState) {
+        if (c == '_') return false;
+    }
+    return true;
+}
