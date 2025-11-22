@@ -12,3 +12,9 @@ void updateState(const string& word, vector<char>& guessedState, char guess) {
         }
     }
 }
+// Функция для выбора случайного слова из списка
+string chooseWord(const vector<string>& words) {
+    srand(time(0));
+    int index = rand() % words.size();
+    return words[index];
+}
