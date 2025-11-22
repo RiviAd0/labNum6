@@ -1,3 +1,10 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
 int main() {
     setlocale(LC_ALL, "ru");
     vector<string> words = { "word", "guess", "game", "question", "code" };
