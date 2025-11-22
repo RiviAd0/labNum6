@@ -1,3 +1,10 @@
+// Функция для выбора случайного слова из списка
+string chooseWord(const vector<string>& words) {
+    srand(time(0));
+    int index = rand() % words.size();
+    return words[index];
+}
+
 // Функция для обновления состояния слова
 void updateState(const string& word, vector<char>& guessedState, char guess) {
     for (size_t i = 0; i < word.length(); ++i) {
@@ -5,4 +12,11 @@ void updateState(const string& word, vector<char>& guessedState, char guess) {
             guessedState[i] = guess;
         }
     }
+}
+// Функция для проверки, есть ли еще неотгаданные буквы
+bool isWordGuessed(const vector<char>& guessedState) {
+    for (char c : guessedState) {
+        if (c == '_') return false;
+    }
+    return true;
 }
